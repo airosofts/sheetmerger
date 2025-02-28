@@ -6,6 +6,9 @@ const app = express();
 
 app.use(cors());
 const upload = multer();
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // server.js (updated merge endpoint)
 app.post('/merge', upload.fields([
