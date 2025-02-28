@@ -128,7 +128,7 @@
                 formData.append('secondMatch', secondMatch);
                 formData.append('columnsToAppend', JSON.stringify(columnsToAppend));
 
-                const response = await fetch('sheetmerger-production.up.railway.app/merge', {
+                const response = await fetch('https://sheetmerger-production.up.railway.app/merge', {
                     method: 'POST',
                     body: formData
                 });
